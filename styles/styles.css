@@ -80,6 +80,16 @@ main,
   text-transform: uppercase;
 }
 
+/* El checkbox permite abrir/cerrar el menu mobile solo con CSS. */
+.nav-toggle {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
 .menu-button {
   display: flex;
   align-items: center;
@@ -94,8 +104,39 @@ main,
   line-height: 1;
 }
 
+.nav-toggle:checked + .brand-row .menu-button,
+.nav-toggle:focus-visible + .brand-row .menu-button {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
 .main-nav {
   display: none;
+  border-top: 1px solid var(--color-line);
+  border-bottom: 1px solid var(--color-line);
+}
+
+/* Si el checkbox esta marcado, el selector de hermanos muestra las opciones. */
+.nav-toggle:checked ~ .main-nav {
+  display: block;
+}
+
+.main-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  list-style: none;
+}
+
+.main-nav a {
+  display: block;
+  padding: 0.85rem 0;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.main-nav li + li {
+  border-top: 1px solid var(--color-line);
 }
 
 main {
@@ -156,7 +197,6 @@ main {
 }
 
 .lead-card img,
-.small-card img,
 .photo-strip img {
   width: 100%;
   height: 100%;
@@ -211,19 +251,29 @@ h1 {
 
 .small-card {
   display: flex;
+  flex-direction: column;
   gap: 0.85rem;
-  padding: 0.75rem;
+  overflow: hidden;
+  padding: 0;
 }
 
-.small-card img {
-  flex: 0 0 34%;
-  aspect-ratio: 1 / 1;
+.small-card-image {
+  display: block;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
 }
 
-.small-card div {
+.small-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.small-card-body {
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
+  padding: 0 0.9rem 0.9rem;
 }
 
 .small-card h2,
@@ -406,23 +456,17 @@ h1 {
 
   .main-nav {
     display: block;
-    border-top: 1px solid var(--color-line);
-    border-bottom: 1px solid var(--color-line);
   }
 
   .main-nav ul {
-    display: flex;
     align-items: center;
+    flex-direction: row;
     justify-content: space-between;
     gap: 1rem;
-    list-style: none;
   }
 
-  .main-nav a {
-    display: block;
-    padding: 0.85rem 0;
-    font-weight: 700;
-    text-transform: uppercase;
+  .main-nav li + li {
+    border-top: 0;
   }
 
   main {
@@ -461,6 +505,23 @@ h1 {
 
   .sidebar {
     flex: 0 0 19rem;
+  }
+
+  .small-card {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .small-card-image {
+    flex: 0 0 42%;
+    aspect-ratio: auto;
+    min-height: 9rem;
+  }
+
+  .small-card-body {
+    justify-content: center;
+    padding: 1rem;
   }
 
   .news-item {

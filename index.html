@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portada original de un diario digital desarrollada con HTML, CSS, Flexbox y enfoque Mobile First."
+    />
+    <title>El Pulso Regional</title>
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-top">
+        <p class="edition">Edicion digital</p>
+        <time datetime="2026-05-26">Martes 26 de mayo de 2026</time>
+      </div>
+
+      <div class="brand-row">
+        <a class="brand" href="#" aria-label="Inicio de El Pulso Regional">
+          <span>El Pulso</span>
+          <strong>Regional</strong>
+        </a>
+        <button class="menu-button" type="button" aria-label="Abrir menu">
+          <span aria-hidden="true">&#9776;</span>
+        </button>
+      </div>
+
+      <nav class="main-nav" aria-label="Navegacion principal">
+        <ul>
+          <li><a href="#">Ciudad</a></li>
+          <li><a href="#">Politica</a></li>
+          <li><a href="#">Economia</a></li>
+          <li><a href="#">Cultura</a></li>
+          <li><a href="#">Deportes</a></li>
+          <li><a href="#">Opinion</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="breaking-strip" aria-label="Ultimas noticias">
+        <strong>Ahora</strong>
+        <a href="#">Nuevo operativo de transporte suma refuerzos en hora pico</a>
+      </section>
+
+      <div class="page-layout">
+        <section class="lead-section" aria-labelledby="main-news-title">
+          <article class="lead-card">
+            <a href="#" class="image-link" aria-label="Leer noticia principal">
+              <img
+                src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1200&q=80"
+                alt="Vista nocturna de una avenida urbana con edificios iluminados"
+              />
+            </a>
+            <div class="lead-content">
+              <p class="category">Ciudad</p>
+              <h1 id="main-news-title">
+                El centro suma corredores verdes y reordena el transito en avenidas clave
+              </h1>
+              <p>
+                La municipalidad presento un plan por etapas que combina bicisendas,
+                paradas renovadas y mas espacios peatonales para mejorar la circulacion.
+              </p>
+              <a class="read-more" href="#">Leer noticia completa</a>
+            </div>
+          </article>
+
+          <div class="featured-row" aria-label="Noticias destacadas">
+            <article class="small-card">
+              <img
+                src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=700&q=80"
+                alt="Personas reunidas en un espacio publico arbolado"
+              />
+              <div>
+                <p class="category">Comunidad</p>
+                <h2><a href="#">Vecinos impulsan una red de plazas activas para el invierno</a></h2>
+              </div>
+            </article>
+
+            <article class="small-card">
+              <img
+                src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=700&q=80"
+                alt="Personas trabajando en una oficina luminosa"
+              />
+              <div>
+                <p class="category">Economia</p>
+                <h2><a href="#">PyMEs locales abren una ronda de empleo para jovenes tecnicos</a></h2>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <aside class="sidebar" aria-label="Informacion complementaria">
+          <section class="ad-box">
+            <span>Publicidad</span>
+            <strong>Especial hogar</strong>
+            <p>Ofertas de temporada en comercios adheridos.</p>
+          </section>
+
+          <section class="most-read" aria-labelledby="most-read-title">
+            <h2 id="most-read-title">Mas leidas</h2>
+            <ol>
+              <li><a href="#">Cinco claves para entender la nueva tarifa de colectivos</a></li>
+              <li><a href="#">La agenda cultural suma teatro, muestras y musica al aire libre</a></li>
+              <li><a href="#">El seleccionado juvenil definio sus convocados para el regional</a></li>
+              <li><a href="#">Como funcionaran los servicios durante el feriado largo</a></li>
+            </ol>
+          </section>
+        </aside>
+      </div>
+
+      <section class="news-grid" aria-labelledby="latest-title">
+        <div class="section-heading">
+          <h2 id="latest-title">Ultimas noticias</h2>
+          <a href="#">Ver todas</a>
+        </div>
+
+        <div class="news-list">
+          <article class="news-item">
+            <p class="category">Educacion</p>
+            <h3><a href="#">Universidades abren inscripciones para becas de investigacion aplicada</a></h3>
+            <p>Los programas apuntan a proyectos vinculados con energia, salud y desarrollo productivo.</p>
+          </article>
+
+          <article class="news-item">
+            <p class="category">Ambiente</p>
+            <h3><a href="#">Lanzan sensores para medir la calidad del aire en barrios del oeste</a></h3>
+            <p>Los datos seran publicados semanalmente en una plataforma abierta para escuelas y vecinos.</p>
+          </article>
+
+          <article class="news-item">
+            <p class="category">Deportes</p>
+            <h3><a href="#">El clasico ya tiene operativo confirmado y entradas agotadas</a></h3>
+            <p>Habra cortes escalonados, refuerzos de transporte y controles en los accesos al estadio.</p>
+          </article>
+
+          <article class="news-item">
+            <p class="category">Cultura</p>
+            <h3><a href="#">Una feria editorial reunira a sellos independientes durante tres dias</a></h3>
+            <p>La programacion incluye charlas, lecturas, talleres graficos y actividades para infancias.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="media-band" aria-labelledby="photos-title">
+        <div class="section-heading">
+          <h2 id="photos-title">En imagenes</h2>
+          <a href="#">Galerias</a>
+        </div>
+
+        <div class="photo-strip">
+          <article>
+            <img
+              src="https://images.unsplash.com/photo-1529440705779-9d1c6884e2c2?auto=format&fit=crop&w=900&q=80"
+              alt="Puesto de frutas y verduras en un mercado"
+            />
+            <h3><a href="#">Mercados barriales preparan una semana con precios cuidados</a></h3>
+          </article>
+          <article>
+            <img
+              src="https://images.unsplash.com/photo-1464692805480-a69dfaafdb0d?auto=format&fit=crop&w=900&q=80"
+              alt="Personas corriendo en una calle de la ciudad"
+            />
+            <h3><a href="#">La maraton nocturna convoca a corredores de toda la region</a></h3>
+          </article>
+          <article>
+            <img
+              src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=900&q=80"
+              alt="Paisaje de rio al atardecer"
+            />
+            <h3><a href="#">El rio recupera visitantes con nuevos circuitos de fin de semana</a></h3>
+          </article>
+        </div>
+      </section>
+
+      <section class="bottom-ad" aria-label="Publicidad">
+        <span>Publicidad</span>
+        <p>Tu marca tambien puede estar en la portada de El Pulso Regional.</p>
+        <a href="#">Consultar espacios</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="footer-brand" href="#">El Pulso Regional</a>
+      <div class="footer-links" aria-label="Enlaces del sitio">
+        <a href="#">Contacto</a>
+        <a href="#">Newsletter</a>
+        <a href="#">Terminos y condiciones</a>
+      </div>
+    </footer>
+  </body>
+</html>

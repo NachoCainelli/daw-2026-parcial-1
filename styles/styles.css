@@ -364,6 +364,100 @@ h1 {
   align-items: flex-start;
 }
 
+.main-nav a[aria-current="page"] {
+  color: var(--color-primary);
+}
+
+.subscription-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.subscription-section .section-heading {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.subscription-section h1 {
+  font-size: clamp(2rem, 12vw, 3.2rem);
+}
+
+.subscription-section .section-heading p {
+  color: var(--color-muted);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.subscription-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  border-top: 1px solid var(--color-line);
+  padding-top: 1rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-field label {
+  color: var(--color-ink);
+  font-weight: 700;
+}
+
+.form-field input {
+  width: 100%;
+  min-height: 2.8rem;
+  border: 1px solid var(--color-line);
+  background: #ffffff;
+  color: var(--color-ink);
+  padding: 0.65rem 0.75rem;
+}
+
+.form-field input:focus {
+  border-color: var(--color-accent);
+  outline: 3px solid rgba(8, 127, 117, 0.18);
+}
+
+.form-field input.is-invalid {
+  border-color: var(--color-primary);
+}
+
+.field-error {
+  min-height: 1.25rem;
+  color: var(--color-primary);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+  padding-top: 0.25rem;
+}
+
+.submit-button {
+  min-width: 11rem;
+  border: 2px solid var(--color-primary);
+  background: var(--color-primary);
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 0.8rem 1.2rem;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.submit-button:hover,
+.submit-button:focus-visible {
+  background: #ffffff;
+  color: var(--color-primary);
+}
+
 .site-footer {
   margin-top: 1.5rem;
   padding: 1.5rem 1rem;
@@ -431,6 +525,14 @@ h1 {
   .footer-links {
     flex-direction: row;
     gap: 1rem;
+  }
+
+  .subscription-form {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .form-actions {
+    grid-column: 1 / -1;
   }
 }
 

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Formulario de suscripcion para lectores de El Pulso Regional."
+    />
+    <title>Suscripcion | El Pulso Regional</title>
+    <link rel="stylesheet" href="styles/reset.css" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <script src="scripts/subscription.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-top">
+        <p class="edition">Edicion digital</p>
+        <time datetime="2026-05-26">Martes 26 de mayo de 2026</time>
+      </div>
+
+      <input class="nav-toggle" type="checkbox" id="nav-toggle" />
+
+      <div class="brand-row">
+        <a class="brand" href="index.html" aria-label="Inicio de El Pulso Regional">
+          <span>El Pulso</span>
+          <strong>Regional</strong>
+        </a>
+        <label class="menu-button" for="nav-toggle" aria-label="Abrir menu">
+          <span aria-hidden="true">&#9776;</span>
+        </label>
+      </div>
+
+      <nav class="main-nav" aria-label="Navegacion principal">
+        <ul>
+          <li><a href="#">Ciudad</a></li>
+          <li><a href="#">Politica</a></li>
+          <li><a href="#">Economia</a></li>
+          <li><a href="#">Cultura</a></li>
+          <li><a href="#">Deportes</a></li>
+          <li><a href="subscription.html" aria-current="page">Suscripcion</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="breaking-strip" aria-label="Ultimas noticias">
+        <strong>Lectores</strong>
+        <a href="subscription.html">Recibi una seleccion diaria de noticias regionales</a>
+      </section>
+
+      <section class="subscription-section" aria-labelledby="subscription-title">
+        <div class="section-heading">
+          <h1 id="subscription-title">HOLA</h1>
+          <p>Suscripcion de lectores</p>
+        </div>
+
+        <form class="subscription-form" id="subscription-form" novalidate>
+          <div class="form-field">
+            <label for="fullName">Nombre completo</label>
+            <input
+              type="text"
+              id="fullName"
+              name="fullName"
+              autocomplete="name"
+              aria-describedby="fullName-error"
+            />
+            <p class="field-error" id="fullName-error" aria-live="polite"></p>
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              autocomplete="email"
+              aria-describedby="email-error"
+            />
+            <p class="field-error" id="email-error" aria-live="polite"></p>
+          </div>
+
+          <div class="form-field">
+            <label for="password">Contrasena</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              autocomplete="new-password"
+              aria-describedby="password-error"
+            />
+            <p class="field-error" id="password-error" aria-live="polite"></p>
+          </div>
+
+          <div class="form-field">
+            <label for="confirmPassword">Repetir contrasena</label>
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              autocomplete="new-password"
+              aria-describedby="confirmPassword-error"
+            />
+            <p class="field-error" id="confirmPassword-error" aria-live="polite"></p>
+          </div>
+
+          <div class="form-field">
+            <label for="age">Edad</label>
+            <input
+              type="number"
+              id="age"
+              name="age"
+              min="18"
+              autocomplete="bday"
+              aria-describedby="age-error"
+            />
+            <p class="field-error" id="age-error" aria-live="polite"></p>
+          </div>
+
+          <div class="form-field">
+            <label for="phone">Telefono</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              autocomplete="tel"
+              aria-describedby="phone-error"
+            />
+            <p class="field-error" id="phone-error" aria-live="polite"></p>
+          </div>
+
+          <div class="form-field">
+            <label for="address">Direccion</label>
+            <input
+              type="text"
+              id="address"
+              name="address"
+              autocomplete="street-address"
+              aria-describedby="address-error"
+            />
+            <p class="field-error" id="address-error" aria-live="polite"></p>
+          </div>
+
+          <div class="form-field">
+            <label for="city">Ciudad</label>
+            <input
+              type="text"
+              id="city"
+              name="city"
+              autocomplete="address-level2"
+              aria-describedby="city-error"
+            />
+            <p class="field-error" id="city-error" aria-live="polite"></p>
+          </div>
+
+          <div class="form-field">
+            <label for="postalCode">Codigo postal</label>
+            <input
+              type="text"
+              id="postalCode"
+              name="postalCode"
+              autocomplete="postal-code"
+              aria-describedby="postalCode-error"
+            />
+            <p class="field-error" id="postalCode-error" aria-live="polite"></p>
+          </div>
+
+          <div class="form-field">
+            <label for="dni">DNI</label>
+            <input
+              type="text"
+              id="dni"
+              name="dni"
+              inputmode="numeric"
+              aria-describedby="dni-error"
+            />
+            <p class="field-error" id="dni-error" aria-live="polite"></p>
+          </div>
+
+          <div class="form-actions">
+            <button class="submit-button" type="submit">Enviar</button>
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="footer-brand" href="index.html">El Pulso Regional</a>
+      <div class="footer-links" aria-label="Enlaces del sitio">
+        <a href="#">Contacto</a>
+        <a href="subscription.html">Newsletter</a>
+        <a href="#">Terminos y condiciones</a>
+      </div>
+    </footer>
+  </body>
+</html>

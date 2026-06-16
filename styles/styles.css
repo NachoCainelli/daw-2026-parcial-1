@@ -216,6 +216,12 @@ main {
   padding: 1rem;
 }
 
+.lead-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
 .category {
   color: var(--color-accent);
   font-size: 0.78rem;
@@ -247,6 +253,22 @@ h1 {
   align-self: flex-start;
   color: var(--color-primary);
   font-weight: 700;
+}
+
+.subscription-button {
+  align-self: flex-start;
+  border: 2px solid var(--color-primary);
+  background: var(--color-primary);
+  color: #ffffff;
+  font-weight: 700;
+  padding: 0.65rem 0.9rem;
+  text-transform: uppercase;
+}
+
+.subscription-button:hover,
+.subscription-button:focus-visible {
+  background: #ffffff;
+  color: var(--color-primary);
 }
 
 .small-card {
